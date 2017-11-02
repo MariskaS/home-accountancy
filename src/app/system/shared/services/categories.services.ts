@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { BaseApi } from '../../../shared/core/base-api';
-import { Category } from '../../../shared/models/category.model';
+import { Category } from '../models/category.model';
+
 
 
 @Injectable()

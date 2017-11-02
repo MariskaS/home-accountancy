@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 94600,
+    "value": 100000,
     "currency": "RUB"
   },
   "categories": [
@@ -16,21 +16,6 @@
       "name": "Дом",
       "capacity": 15000,
       "id": 1
-    },
-    {
-      "name": "fff",
-      "limit": 1245,
-      "id": 2
-    },
-    {
-      "name": "test",
-      "limit": 3333,
-      "id": 3
-    },
-    {
-      "name": "ttt",
-      "limit": 2,
-      "id": 4
     }
   ],
   "events": [
@@ -97,6 +82,30 @@
       "date": "03.07.2017 23:26:15",
       "description": "тест фильтр",
       "id": 8
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "category": 6,
+      "date": "02.11.2017 04:05:15",
+      "description": "ssss",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "02.11.2017 04:08:14",
+      "description": "ssss",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "02.11.2017 04:12:10",
+      "description": "cc",
+      "id": 11
     }
   ]
 }
