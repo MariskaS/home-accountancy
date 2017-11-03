@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-
-import { BaseApi } from '../../../shared/core/base-api';
 import { HAEvent } from '../models/event.model';
-
+import { BaseApi } from '../../../shared/core/base-api';
 
 @Injectable()
 export class EventsService extends BaseApi {
@@ -14,5 +12,13 @@ export class EventsService extends BaseApi {
 
   addEvent(event: HAEvent): Observable<HAEvent> {
     return this.post('events', event);
+  }
+
+  getEvents(): Observable<HAEvent[]> {
+    return this.get('events');
+  }
+
+  getEventById(id: string): Observable<HAEvent> {
+    return this.get(`events/${id}`);
   }
 }

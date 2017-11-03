@@ -8,14 +8,24 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 22220222,
     "currency": "RUB"
   },
   "categories": [
     {
       "name": "Дом",
-      "capacity": 15000,
+      "capacity": 10000,
       "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 10000,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Машина",
+      "capacity": 7000
     }
   ],
   "events": [
@@ -24,7 +34,7 @@
       "type": "income",
       "amount": 1250,
       "category": 2,
-      "date": "12.07.2017 19:49:02",
+      "date": "12.06.2017 19:49:02",
       "description": "Подарили еду в гостях"
     },
     {
@@ -32,14 +42,14 @@
       "type": "outcome",
       "amount": 1300,
       "category": 1,
-      "date": "13.07.2017 19:49:02",
+      "date": "13.06.2017 19:49:02",
       "description": "Купил посудомоечную машину"
     },
     {
       "type": "income",
       "amount": 1480,
       "category": 2,
-      "date": "17.07.2017 14:00:48",
+      "date": "17.06.2017 14:00:48",
       "id": 3,
       "description": "Поход в окей с баллами. Бесплатная еда"
     },
@@ -47,7 +57,7 @@
       "type": "outcome",
       "amount": 2470,
       "category": 2,
-      "date": "17.07.2017 14:00:58",
+      "date": "17.06.2017 14:00:58",
       "id": 4,
       "description": "Закупка на неделю"
     },
@@ -55,57 +65,25 @@
       "type": "outcome",
       "amount": 4000,
       "category": 3,
-      "date": "10.07.2017 14:01:58",
+      "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
     },
     {
-      "type": "outcome",
-      "amount": 1200,
-      "category": 3,
-      "date": "02.07.2017 23:28:48",
-      "description": "Test",
+      "type": "income",
+      "amount": 22222222,
+      "category": 1,
+      "date": "02.11.2017 14:04:56",
+      "description": "fghngn",
       "id": 6
     },
     {
       "type": "outcome",
-      "amount": 3000,
-      "category": 3,
-      "date": "02.07.2017 23:29:11",
-      "description": "test 2",
+      "amount": 12000,
+      "category": 1,
+      "date": "02.11.2017 14:07:09",
+      "description": "any",
       "id": 7
-    },
-    {
-      "type": "outcome",
-      "amount": 1200,
-      "category": 2,
-      "date": "03.07.2017 23:26:15",
-      "description": "тест фильтр",
-      "id": 8
-    },
-    {
-      "type": "income",
-      "amount": 1,
-      "category": 6,
-      "date": "02.11.2017 04:05:15",
-      "description": "ssss",
-      "id": 9
-    },
-    {
-      "type": "outcome",
-      "amount": 1,
-      "category": 1,
-      "date": "02.11.2017 04:08:14",
-      "description": "ssss",
-      "id": 10
-    },
-    {
-      "type": "outcome",
-      "amount": 1,
-      "category": 1,
-      "date": "02.11.2017 04:12:10",
-      "description": "cc",
-      "id": 11
     }
   ]
 }
