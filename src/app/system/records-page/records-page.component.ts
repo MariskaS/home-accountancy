@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { CategoriesService } from '../shared/services/categories.services';
 import { Category } from '../shared/models/category.model';
-
+import { CategoriesService } from '../shared/services/categories.service';
 
 @Component({
   selector: 'ha-records-page',

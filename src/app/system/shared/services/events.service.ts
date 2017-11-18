@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { HAEvent } from '../models/event.model';
+
 import { BaseApi } from '../../../shared/core/base-api';
+import { HAEvent } from '../models/event.model';
 
 @Injectable()
 export class EventsService extends BaseApi {

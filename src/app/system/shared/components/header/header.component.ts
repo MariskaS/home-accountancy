@@ -10,6 +10,7 @@ import { AuthService } from '../../../../shared/services/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
   date: Date = new Date();
   user: User;
 
@@ -25,4 +26,5 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
 }

@@ -3,13 +3,12 @@ import { NgForm } from '@angular/forms';
 import * as moment from 'moment';
 
 import { Category } from '../../shared/models/category.model';
-
+import { HAEvent } from '../../shared/models/event.model';
 import { EventsService } from '../../shared/services/events.service';
 import { BillService } from '../../shared/services/bill.service';
 import { Bill } from '../../shared/models/bill.model';
 import { Message } from '../../../shared/models/message.model';
 import { Subscription } from 'rxjs/Subscription';
-import { HAEvent } from '../../shared/models/event.model';
 
 @Component({
   selector: 'ha-add-event',
@@ -23,8 +22,8 @@ export class AddEventComponent implements OnInit, OnDestroy {
   @Input() categories: Category[] = [];
 
   types = [
-    {type: 'income', label: 'Income'},
-    {type: 'outcome', label: 'Outcome'}
+    {type: 'income', label: 'Доход'},
+    {type: 'outcome', label: 'Расход'}
   ];
 
   message: Message;
@@ -56,7 +55,7 @@ export class AddEventComponent implements OnInit, OnDestroy {
         let value = 0;
         if (type === 'outcome') {
           if (amount > bill.value) {
-            this.showMessage(`There are not enough funds on the account. You do not have enough ${amount - bill.value}`);
+            this.showMessage(`На счету недостаточно средств. Вам нехватает ${amount - bill.value}`);
             return;
           } else {
             value = bill.value - amount;

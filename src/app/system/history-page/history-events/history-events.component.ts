@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Category } from '../../shared/models/category.model';
 import { HAEvent } from '../../shared/models/event.model';
+import { Category } from '../../shared/models/category.model';
 
 @Component({
   selector: 'ha-history-events',
@@ -14,8 +14,7 @@ export class HistoryEventsComponent implements OnInit {
   searchPlaceholder = 'Сумма';
   searchField = 'amount';
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
     this.events.forEach((e) => {

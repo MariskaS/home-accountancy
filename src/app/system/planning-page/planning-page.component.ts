@@ -1,14 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BillService } from '../shared/services/bill.service';
-
+import { CategoriesService } from '../shared/services/categories.service';
 import { EventsService } from '../shared/services/events.service';
 import { Observable } from 'rxjs/Observable';
 import { Bill } from '../shared/models/bill.model';
 import { Category } from '../shared/models/category.model';
-
-import { Subscription } from 'rxjs/Subscription';
-import { CategoriesService } from '../shared/services/categories.services';
 import { HAEvent } from '../shared/models/event.model';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'ha-planning-page',

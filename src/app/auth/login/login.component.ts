@@ -1,25 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user.model';
 import { Message } from '../../shared/models/message.model';
 import { AuthService } from '../../shared/services/auth.service';
+import { fadeStateTrigger } from '../../shared/animations/fade.animation';
 
 @Component({
   selector: 'ha-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
+
   form: FormGroup;
   message: Message;
 
   constructor(private usersService: UsersService,
               private authService: AuthService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private title: Title,
+              private meta: Meta
+  ) {
+    title.setTitle('Вход в систему');
+    meta.addTags([
+      { name: 'keywords', content: 'логин,вход,система' },
+      { name: 'description', content: 'Страница для входа в систему' }
+    ]);
   }
 
   ngOnInit() {
@@ -29,8 +41,13 @@ export class LoginComponent implements OnInit {
       .subscribe((params: Params) => {
         if (params['nowCanLogin']) {
           this.showMessage({
-            text: 'Now you can login',
+            text: 'Теперь вы можете зайти в систему',
             type: 'success'
+          });
+        } else if (params['accessDenied']) {
+          this.showMessage({
+            text: 'Для работы с системой вам необходимо войти',
+            type: 'warning'
           });
         }
       });
@@ -43,6 +60,7 @@ export class LoginComponent implements OnInit {
 
   private showMessage(message: Message) {
     this.message = message;
+
     window.setTimeout(() => {
       this.message.text = '';
     }, 5000);
@@ -61,13 +79,13 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/system', 'bill']);
           } else {
             this.showMessage({
-              text: 'Wrong password',
+              text: 'Пароль не верный',
               type: 'danger'
             });
           }
         } else {
           this.showMessage({
-            text: 'There is no such user',
+            text: 'Такого пользователя не существует',
             type: 'danger'
           });
         }

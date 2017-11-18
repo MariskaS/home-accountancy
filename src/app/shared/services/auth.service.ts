@@ -1,4 +1,5 @@
 export class AuthService {
+
   private isAuthenticated = false;
 
   login() {
@@ -10,7 +11,8 @@ export class AuthService {
     window.localStorage.clear();
   }
 
-  isLoggeIn(): boolean {
+  isLoggedIn(): boolean {
     return this.isAuthenticated;
   }
+
 }

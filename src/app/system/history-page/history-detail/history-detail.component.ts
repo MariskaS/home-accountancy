@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { EventsService } from '../../shared/services/events.service';
-
+import { CategoriesService } from '../../shared/services/categories.service';
+import { HAEvent } from '../../shared/models/event.model';
 import { Category } from '../../shared/models/category.model';
 import { Subscription } from 'rxjs/Subscription';
-import { CategoriesService } from '../../shared/services/categories.services';
-import { HAEvent } from '../../shared/models/event.model';
 
 @Component({
   selector: 'ha-history-detail',

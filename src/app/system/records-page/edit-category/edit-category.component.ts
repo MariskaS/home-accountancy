@@ -1,11 +1,9 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscription } from 'rxjs/Subscription';
-
-import { Message } from '../../../shared/models/message.model';
-import { CategoriesService } from '../../shared/services/categories.services';
 import { Category } from '../../shared/models/category.model';
-
+import { CategoriesService } from '../../shared/services/categories.service';
+import { Message } from '../../../shared/models/message.model';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'ha-edit-category',
@@ -44,7 +42,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
     this.sub1 = this.categoriesService.updateCategory(category)
       .subscribe((category: Category) => {
         this.onCategoryEdit.emit(category);
-        this.message.text = 'The category has been edited successfully.';
+        this.message.text = 'Категория успешно отредактирована.';
         window.setTimeout(() => this.message.text = '', 5000);
       });
   }
